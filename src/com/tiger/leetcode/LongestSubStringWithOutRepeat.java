@@ -3,7 +3,7 @@ package com.tiger.leetcode;
 /**
  * Created by tigerzhang on 14/8/30.
  * problem definition:
- * Given a string, find the length of the longest substring without repeating characters.
+ * Given a string, findClosest the length of the longest substring without repeating characters.
  * For example, the longest substring without repeating letters for "abcabcbb" is "abc", which the length is 3.
  * For "bbbbb" the longest substring is "b", with the length of 1.
  */
