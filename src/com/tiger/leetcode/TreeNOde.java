@@ -20,16 +20,24 @@ class TreeNodeHelper{
         if(index >= array.length) return null;
         if(array[index] == -1) return null;
         TreeNode head = new TreeNode(array[index]);
-        head.left = buildTree(array, index * 2);
-        head.right = buildTree(array, index*2+1);
+        head.left = buildTree(array, index * 2 + 1);
+        head.right = buildTree(array, index * 2 + 2);
         return head;
     }
 
 
     public static void preTraverse(TreeNode root) {
         if(root == null) return;
-        System.out.println(root.val + " ");
+        System.out.print(root.val + " ");
         preTraverse(root.left);
         preTraverse(root.right);
+    }
+
+    public static void inTraverse(TreeNode root) {
+        if(root == null) return;
+        inTraverse(root.left);
+        System.out.print(root.val + " ");
+        inTraverse(root.right);
+
     }
 }

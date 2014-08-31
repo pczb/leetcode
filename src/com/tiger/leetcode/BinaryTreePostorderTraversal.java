@@ -10,9 +10,13 @@ import java.util.Stack;
 public class BinaryTreePostorderTraversal {
 
     public static void main(String[] args) {
-        TreeNode root = TreeNodeHelper.buildTree(new int[]{1,2,3}, 0);
+        TreeNode root = TreeNodeHelper.buildTree(new int[]{3, 2, 4, -1, -1, 1}, 0);
+        TreeNodeHelper.preTraverse(root);
+        TreeNodeHelper.inTraverse(root);
+        System.out.println();
+
         for(int i: postorderTraversal(root)){
-            System.out.print(i+" ");
+            System.out.print(i + " ");
         }
     }
     public static List<Integer> postorderTraversal(TreeNode root) {
@@ -22,20 +26,35 @@ public class BinaryTreePostorderTraversal {
         else stack.push(root);
 
         TreeNode prev = null, current;
-        while(!stack.empty()) {
+        while(! stack.empty()) {
 
             current = stack.peek();
             if(current.left == null && current.right == null){
                 ans.add(current.val);
-                prev = current;
                 stack.pop();
+                prev = current;
             }
-            if(current.left == prev && current.right != null){
-                stack.push(current.right);
-            }else if((current.left == prev && current.right == null)|| current.right == prev){
+            if(prev == null){
+                while(current.left != null) {
+                    stack.push(current.left);
+                    current = current.left;
+                }
+            }
+            if(prev == current.right){
                 ans.add(current.val);
                 prev = current;
                 stack.pop();
+            }
+            if(prev == current.left){
+                if(current.right == null){
+                    ans.add(current.val);
+                    stack.pop();
+                    prev = current;
+                }else{
+                    stack.push(current.right);
+                    prev = null;
+                }
+
             }
         }
         return ans;
