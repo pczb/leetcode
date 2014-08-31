@@ -11,20 +11,5 @@ public class ListNode {
         next = null;
     }
 
-    public static ListNode buildList(int...array){
-        ListNode head = new ListNode(0);
-        ListNode current = head;
-        for(int i: array){
-            current.next = new ListNode(i);
-            current = current.next;
-        }
-        return head.next;
-    }
 
-    public static void printList(ListNode head){
-        while (head != null){
-            System.out.print(head.val + " ");
-            head = head.next;
-        }
-    }
 }

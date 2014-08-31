@@ -9,7 +9,7 @@ public class ReverseNodesInkGroup {
 
     public static void main(String[] args) {
         ReverseNodesInkGroup solution = new ReverseNodesInkGroup();
-        ListNode.printList(solution.reverseKGroup(ListNode.buildList(1,2,3), 3));
+        ListNodeHelper.printList(solution.reverseKGroup(ListNodeHelper.buildList(1,2,3), 3));
     }
     public ListNode reverseKGroup(ListNode head, int k) {
         int count = 0;

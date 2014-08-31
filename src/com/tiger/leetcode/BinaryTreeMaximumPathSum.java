@@ -13,7 +13,6 @@ public class BinaryTreeMaximumPathSum {
         root.left.left = new TreeNode(-10);
         root.left.right = new TreeNode(-20);
 
-        System.out.println(maxPathSum(root));
     }
 
     public  int maxPathSum(TreeNode root){

@@ -9,8 +9,8 @@ import java.util.List;
 public class MergeKSortedList {
 
     public static void main(String[] args) {
-        ListNode l1 = ListNode.buildList(2);
-        ListNode l3 = ListNode.buildList(-1);
+        ListNode l1 = ListNodeHelper.buildList(2);
+        ListNode l3 = ListNodeHelper.buildList(-1);
 //        ListNode l4 = ListNode.buildList();
 //        ListNode l2 = ListNode.buildList();
         ListNode l5 = null;
@@ -20,7 +20,7 @@ public class MergeKSortedList {
         lists.add(l5);
 //        lists.add(l4);
         lists.add(l3);
-        ListNode.printList(mergeKLists(lists));
+        ListNodeHelper.printList(mergeKLists(lists));
     }
 
     public static ListNode mergeKLists(List<ListNode> lists) {

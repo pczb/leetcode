@@ -60,10 +60,10 @@ public class AddTwoNumbers {
     }
 
     public static void main(String[] args) {
-        ListNode l1 = ListNode.buildList(new int[]{1});
-        ListNode l2 = ListNode.buildList(new int[]{9, 9});
+        ListNode l1 = ListNodeHelper.buildList(new int[]{1});
+        ListNode l2 = ListNodeHelper.buildList(new int[]{9, 9});
         AddTwoNumbers solution = new AddTwoNumbers();
-        ListNode.printList(solution.addTwoNumbers(l1, l2));
+        ListNodeHelper.printList(solution.addTwoNumbers(l1, l2));
 
     }
 }
