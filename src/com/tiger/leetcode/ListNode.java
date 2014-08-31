@@ -6,7 +6,8 @@ package com.tiger.leetcode;
 public class ListNode {
     public int val;
     public ListNode next;
-    public ListNode(int val){
+
+    public ListNode(int val) {
         this.val = val;
         next = null;
     }

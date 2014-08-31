@@ -23,11 +23,9 @@ public class FourSum {
 
                     if (sum > target) {
                         n--;
-                    }
-                    else if (sum < target) {
+                    } else if (sum < target) {
                         m++;
-                    }
-                    else if (sum == target) {
+                    } else if (sum == target) {
                         ArrayList<Integer> tmp = new ArrayList<Integer>();
                         tmp.add(num[i]);
                         tmp.add(num[j]);

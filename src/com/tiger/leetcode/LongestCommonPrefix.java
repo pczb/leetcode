@@ -5,7 +5,7 @@ package com.tiger.leetcode;
  */
 public class LongestCommonPrefix {
     public String longestCommonPrefix(String[] strs) {
-        if(strs == null) return "";
+        if (strs == null) return "";
         String result = "";
         int len = strs.length;
         int i, j;

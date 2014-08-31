@@ -24,20 +24,20 @@ public class MergeKSortedList {
     }
 
     public static ListNode mergeKLists(List<ListNode> lists) {
-        if(lists == null || lists.size() == 0) return null;
+        if (lists == null || lists.size() == 0) return null;
         ListNode[] nodes = new ListNode[lists.size()];
         lists.toArray(nodes);
         int len = nodes.length;
-        while(len > 1) {
+        while (len > 1) {
             int tmp = len / 2;
             int i = 0;
             for (; i < tmp; i++) {
                 nodes[i] = merge(nodes[2 * i], nodes[2 * i + 1]);
             }
-            if (len % 2 == 1){
+            if (len % 2 == 1) {
                 nodes[i] = nodes[len - 1];
                 len = i + 1;
-            }else{
+            } else {
                 len = i;
             }
         }
@@ -48,19 +48,19 @@ public class MergeKSortedList {
         ListNode head = new ListNode(0);
         ListNode current = head;
         while (l1 != null && l2 != null) {
-            if(l1.val <= l2.val){
+            if (l1.val <= l2.val) {
                 current.next = l1;
                 l1 = l1.next;
-            }else{
+            } else {
                 current.next = l2;
                 l2 = l2.next;
             }
             current = current.next;
         }
-        if(l1 != null){
+        if (l1 != null) {
             current.next = l1;
         }
-        if(l2 != null){
+        if (l2 != null) {
             current.next = l2;
 
         }

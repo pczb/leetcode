@@ -6,15 +6,15 @@ package com.tiger.leetcode;
 public class RemoveDuplicateFromArray {
     public class Solution {
         public int removeDuplicates(int[] A) {
-            if(A.length == 0) return 0;
+            if (A.length == 0) return 0;
             int start = 0;
             int i = 1;
-            while(i < A.length){
-                if(A[start] != A[i])
+            while (i < A.length) {
+                if (A[start] != A[i])
                     A[++start] = A[i];
                 i++;
             }
-            return start+1;
+            return start + 1;
         }
     }
 }

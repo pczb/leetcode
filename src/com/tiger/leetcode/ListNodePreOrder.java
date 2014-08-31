@@ -15,22 +15,23 @@ public class ListNodePreOrder {
         TreeNodeHelper.inTraverse(root);
         System.out.println();
 
-        for(int i: preorderTraversal(root)){
+        for (int i : preorderTraversal(root)) {
             System.out.print(i + " ");
         }
     }
+
     public static List<Integer> preorderTraversal(TreeNode root) {
         List<Integer> ans = new ArrayList<Integer>();
         Stack<TreeNode> stack = new Stack<TreeNode>();
-        if(root == null) return ans;
+        if (root == null) return ans;
         else stack.push(root);
 
         TreeNode node;
-        while(!stack.empty()){
+        while (!stack.empty()) {
             node = stack.pop();
-            while(node != null) {
+            while (node != null) {
                 ans.add(node.val);
-                if(node.right != null);
+                if (node.right != null) ;
                 stack.push(node.right);
                 node = node.left;
             }

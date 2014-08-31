@@ -7,10 +7,10 @@ public class InsertionSortList {
 
     public ListNode insertionSortList(ListNode head) {
         ListNode start = new ListNode(0);
-        while(head!=null){
+        while (head != null) {
             ListNode pre = start;
-            while(pre != null){
-                if(pre.next == null || head.val <= pre.next.val){
+            while (pre != null) {
+                if (pre.next == null || head.val <= pre.next.val) {
                     ListNode tmpNode = pre.next;
                     pre.next = head;
                     head = head.next;
@@ -21,6 +21,6 @@ public class InsertionSortList {
             }
         }
         return start.next;
-        }
+    }
 
 }

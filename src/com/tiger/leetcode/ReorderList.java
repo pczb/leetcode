@@ -6,9 +6,9 @@ package com.tiger.leetcode;
 public class ReorderList {
 
     public void reorderList(ListNode head) {
-        if(head == null) return;
+        if (head == null) return;
         ListNode fast = head, slow = head;
-        while(fast.next != null && fast.next.next != null){
+        while (fast.next != null && fast.next.next != null) {
             fast = fast.next.next;
             slow = slow.next;
         }
@@ -17,7 +17,7 @@ public class ReorderList {
         fast = reverse(fast);
 
         ListNode lcurrent = head, rcurrent = fast, lnext, rnext;
-        while(rcurrent != null){
+        while (rcurrent != null) {
             lnext = lcurrent.next;
             rnext = rcurrent.next;
             lcurrent.next = rcurrent;
@@ -31,7 +31,7 @@ public class ReorderList {
         ListNode pre = null;
         ListNode current = head;
         ListNode next;
-        while(current != null) {
+        while (current != null) {
             next = current.next;
             current.next = pre;
             pre = current;

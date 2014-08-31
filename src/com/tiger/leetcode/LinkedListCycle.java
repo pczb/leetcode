@@ -6,20 +6,20 @@ package com.tiger.leetcode;
 public class LinkedListCycle {
     public boolean hasCycle(ListNode head) {
         ListNode fast = head, slow = head;
-        while(fast != null && fast.next != null) {
+        while (fast != null && fast.next != null) {
             fast = fast.next.next;
             slow = slow.next;
-            if(fast == slow) return true;
+            if (fast == slow) return true;
         }
         return false;
     }
 
     public ListNode detectCycle(ListNode head) {
         ListNode fast = head, slow = head;
-        while(fast != null && fast.next != null) {
+        while (fast != null && fast.next != null) {
             fast = fast.next.next;
             slow = slow.next;
-            if(fast == slow){
+            if (fast == slow) {
                 slow = head;
                 while (slow != fast) {
                     slow = slow.next;
