@@ -11,7 +11,7 @@ public class ListNode {
         next = null;
     }
 
-    public static ListNode buildList(int[] array){
+    public static ListNode buildList(int...array){
         ListNode head = new ListNode(0);
         ListNode current = head;
         for(int i: array){
