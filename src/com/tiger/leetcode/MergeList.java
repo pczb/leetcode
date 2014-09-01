@@ -39,13 +39,13 @@ public class MergeList {
         index = belowIndex;
         while (index.next != null) {
             index = index.next;
-            //           System.out.println(index.val+"     z      ");
+            //           System.out.println(index.label+"     z      ");
         }
 
         index.next = head;
         while (index.next != null) {
             index = index.next;
-//            System.out.println(index.val+"     x      ");
+//            System.out.println(index.label+"     x      ");
         }
 
         index.next = sortList(aboveHead.next);

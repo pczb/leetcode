@@ -9,10 +9,10 @@ public class PathSumTwo {
     /**
      * Definition for binary tree
      * public class TreeNode {
-     *     int val;
+     *     int label;
      *     TreeNode left;
      *     TreeNode right;
-     *     TreeNode(int x) { val = x; }
+     *     TreeNode(int x) { label = x; }
      * }
      */
     class Solution {
