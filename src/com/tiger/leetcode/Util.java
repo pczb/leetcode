@@ -24,4 +24,9 @@ public class Util {
         for(E e: list) System.out.print(e + " ");
         System.out.println();
     }
+
+    public static  void printInts(Object... a){
+        for(Object e: a) System.out.print(e + " ");
+        System.out.println();
+    }
 }
