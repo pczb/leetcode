@@ -1,5 +1,7 @@
 package com.tiger.leetcode;
 
+import java.util.List;
+
 /**
  * Created by tigerzhang on 14/8/30.
  */
@@ -18,4 +20,8 @@ public class Util {
         System.out.println();
     }
 
+    public static <E> void printList(List<E> list){
+        for(E e: list) System.out.print(e + " ");
+        System.out.println();
+    }
 }

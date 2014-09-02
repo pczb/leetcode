@@ -7,14 +7,7 @@ package com.tiger.leetcode;
 public class PopulateRightTwo {
 
 
-    public class TreeLinkNode {
-        int val;
-        TreeLinkNode left, right, next;
 
-        TreeLinkNode(int x) {
-            val = x;
-        }
-    }
 
     public class Solution {
         public void connect(TreeLinkNode root) {
@@ -53,5 +46,13 @@ public class PopulateRightTwo {
                 first = nextFirst;
             }
         }
+    }
+}
+class TreeLinkNode {
+    int val;
+    TreeLinkNode left, right, next;
+
+    TreeLinkNode(int x) {
+        val = x;
     }
 }

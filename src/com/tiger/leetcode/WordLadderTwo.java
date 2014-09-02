@@ -91,7 +91,7 @@ public class WordLadderTwo {
         }
     }
 
-    private void printPath(List<String> path) {
+    private  void printPath(List<String> path) {
         if (path == null) return;
         for (String str : path) System.out.print(str + "-->");
         System.out.println();

@@ -3,7 +3,7 @@ package com.tiger.leetcode;
 /**
  * Created by tigerzhang on 14/9/2.
  */
-public class StockII {
+public class StockTwo {
     public class Solution {
         public int maxProfit(int[] prices) {
             if(prices.length <= 1) return 0;
