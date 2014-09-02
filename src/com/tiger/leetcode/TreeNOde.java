@@ -38,6 +38,5 @@ class TreeNodeHelper {
         inTraverse(root.left);
         System.out.print(root.val + " ");
         inTraverse(root.right);
-
     }
 }

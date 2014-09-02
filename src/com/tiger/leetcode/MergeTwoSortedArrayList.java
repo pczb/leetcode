@@ -3,7 +3,7 @@ package com.tiger.leetcode;
 /**
  * Created by tigerzhang on 14/8/31.
  */
-public class MergeTwoSortedArray {
+public class MergeTwoSortedArrayList {
     public class Solution {
         public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
             ListNode head = new ListNode(0);
