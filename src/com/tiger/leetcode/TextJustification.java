@@ -17,7 +17,21 @@ public class TextJustification {
                     pre += 1;
             }else{
                 int wordsCount = tmp.size();
-                int space = (L - wordsLen)
+                int space = (L - wordsLen) / (wordsCount- 1);
+                int extra = (L - wordsLen) % (wordsCount - 1);
+                StringBuilder builder = new StringBuilder();
+                for(int j = 0; j < wordsCount; j++){
+                    builder.append(tmp.get(j));
+                    if(j < wordsCount - 1) {
+                        for (int k = 0; k < space; k++)
+                            builder.append(" ");
+                        if (extra != 0) {
+                            builder.append(" ");
+                            extra -= 1;
+                        }
+                    }
+                }
+                ret.add(builder.toString());
             }
         }
         return null;
