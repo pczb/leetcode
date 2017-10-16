@@ -13,6 +13,12 @@ public class TreeNode {
         left = right = null;
     }
 
+    @Override
+    public String toString() {
+        return "TreeNode{" +
+                "val=" + val +
+                '}';
+    }
 }
 
 class TreeNodeHelper {

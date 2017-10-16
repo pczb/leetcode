@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 path=~/Desktop/leetcode/out/production/leetcode/
 ext=.java
 package='com.tiger.leetcode.'
